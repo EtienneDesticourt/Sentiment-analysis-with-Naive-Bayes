@@ -1,0 +1,6 @@
+Sentiment analysis with Naive Bayes
+Home made implementation of Naive Bayes applied to a common problematic in the natural language processing field.
+
+The dataset used was the imdb 50 000 reviews dataseet from:
+Proceedings of the 49th annual meeting of the Association for Computational Linguistics: Human Language Technologies. Vol. 1. 2011. 
+Pauls, Adam, and Dan Klein. "Faster and smaller n-gram language models." 

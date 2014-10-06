@@ -1,0 +1,6 @@
+aclImdb/
+DatasetLoader.pyc
+NBClassifier.pyc
+ReviewParser.pyc
+.project
+.pydevproject
