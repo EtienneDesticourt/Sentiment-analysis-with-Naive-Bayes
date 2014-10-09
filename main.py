@@ -19,8 +19,12 @@ TESTPATHS = ["E:\\Program Files\\Dev\\workspace\\Sentiment analysis with Naive B
 
 
 #Train
+import time
+start = time.time()
 dataset = loadDataset(TRAINPATHS)
 classes = parseDataset(dataset)
+print time.time()-start
+print len(classes[0])+len(classes[1])
 NBC = NBClassifier(classes,len(dataset))
 
 #Test

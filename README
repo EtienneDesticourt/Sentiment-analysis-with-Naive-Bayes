@@ -1,6 +1,19 @@
 Sentiment analysis with Naive Bayes
 Home made implementation of Naive Bayes applied to a common problematic in the natural language processing field.
 
+A few notes:
+	Putting all the reviews in lowercase only has an unsignificant effect on accuracy,
+	on this dataset it increases it by 0.2%. It's done for convenience when looking at the results. 
+
+	In 1D: 
+		Training time: About 40 seconds
+		Accuracy on test set: 65%
+	In 2D:
+		Training time: About 3 minutes
+		Accuracy on test set: 49%
+
+
+
 The dataset used was the imdb 50 000 reviews dataseet from:
 Proceedings of the 49th annual meeting of the Association for Computational Linguistics: Human Language Technologies. Vol. 1. 2011. 
 Pauls, Adam, and Dan Klein. "Faster and smaller n-gram language models." 
