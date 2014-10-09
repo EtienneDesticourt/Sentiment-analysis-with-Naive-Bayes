@@ -16,6 +16,8 @@ TESTPATHS = ["E:\\Program Files\\Dev\\workspace\\Sentiment analysis with Naive B
          "E:\\Program Files\\Dev\\workspace\\Sentiment analysis with Naive Bayes\\aclImdb\\test\\neg"]
 
 
+
+
 #Train
 dataset = loadDataset(TRAINPATHS)
 classes = parseDataset(dataset)
@@ -30,6 +32,7 @@ for review in testDataset:
     words = parseReview(review[0])
     result = NBC.classify(words)
     if result == review[1]: correct += 1
+            
 
 accuracy = correct/total*100
 print accuracy

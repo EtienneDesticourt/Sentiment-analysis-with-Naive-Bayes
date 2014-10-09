@@ -7,6 +7,7 @@ import re
 
     
 def parseReview(review):
+    review = review.lower() #For now we ignore the difference between Great, GREAT and great.
     #Split by sentence to avoid linking unrelated words if I decide to get higher dimensional features later on.
     punctuation = re.compile("[?.!]") #Should probably add parentheses handling later
     sentences = punctuation.split(review)

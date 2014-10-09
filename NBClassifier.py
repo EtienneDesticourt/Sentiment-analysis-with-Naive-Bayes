@@ -16,8 +16,8 @@ class NBClassifier:
         self.probaPosClass = float(len(classes[0])) / ( len(classes[0]) + len(classes[1]) ) 
         self.probaNegClass = float(len(classes[1])) / ( len(classes[0]) + len(classes[1]) )
         #number of tokens in each class
-        self.numbPosWords = sum(self.classes[0].values())
-        self.numbNegWords = sum(self.classes[1].values())
+        self.numbPosWords = len(self.classes[0])#Number of different words, not total number of words.
+        self.numbNegWords = len(self.classes[1])#
         self.numbWords = [self.numbPosWords,self.numbNegWords]
         
     def getWordListProbability(self,words,sentiment):
@@ -28,13 +28,12 @@ class NBClassifier:
             try: #25 000 reviews dataset I assume it will encompass almost every "reviewy" word hence 'try' instead of 'if in'
                 count = self.classes[sentiment][word]
             except KeyError:
-                count = 0
+                count = 0.5
                 
-            if count == 0: count = 0.5
-            else: wordProba.append(float(count)/numbWords)
+            wordProba.append(float(count)/numbWords)
         return wordProba
     
-    def classify(self,reviewWords):
+    def classify(self,reviewWords,v=False):
         wordProbaPos = self.getWordListProbability(reviewWords,0) 
         wordProbaNeg = self.getWordListProbability(reviewWords,1)
         
@@ -42,6 +41,15 @@ class NBClassifier:
         probaNegReview =  reduce(mul, wordProbaNeg)*self.probaNegClass 
         
         
+        
+        if v:
+            print "wordProbaPos:",wordProbaPos 
+            print "wordProbaNeg:",wordProbaNeg 
+            print "probaPosReview",probaPosReview 
+            print "probaNegReview",probaNegReview 
+        
+        
         if probaNegReview > probaPosReview: return 1
+        
         return 0
         
