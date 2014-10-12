@@ -15,9 +15,8 @@ A few notes:
 		Probably would benefit from review cleaning but can't run it on my netbook.
 		
 	Possible improvements:
-		Feature selection when cleaning reviews. Worthless words were chosen depending on how relevant I felt
-		they were to the task but a genetic algorithm would be much more effective.
-		My goal here was strictly to understand the Naive Bayes algorithm so I won't be implementing it.
+		Feature selection when cleaning reviews. Worthless words were chosen depending on how relevant I felt they were to the task but a genetic algorithm would be much more effective.
+		My goal hered being to understand Naive Bayes I won't be implementing any feature selection algorithms in this project.
 
 
 
