@@ -18,7 +18,8 @@ A few notes:
 		Feature selection when cleaning reviews. Worthless words were chosen depending on how relevant I felt they were to the task but a genetic algorithm would be much more effective. Other possible simpler feature selection processes: only adjectives.
 		My goal hered being to understand Naive Bayes I won't be implementing any feature selection algorithms in this project.
 
-
+Skills acquired: Naives bayes understanding.
+Skills consolidated: dataset parsing, data exploration(with excel, not featured in this repo), feature selection
 
 The dataset used was the imdb 50 000 reviews dataseet from:
 Proceedings of the 49th annual meeting of the Association for Computational Linguistics: Human Language Technologies. Vol. 1. 2011. 
